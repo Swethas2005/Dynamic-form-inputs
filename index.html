@@ -27,12 +27,9 @@
       };
   
       const handleRemoveHobby = (index) => {
-        if (index !== 0) {
-          const newHobbies = [...hobbies];
-          newHobbies.splice(index, 1);
-          setHobbies(newHobbies);
-        }
-      };
+        const newHobbies = hobbies.filter((hobby, i) => i !== index);
+        setHobbies(newHobbies);
+      };
   
       const handleSubmit = (event) => {
         event.preventDefault();
